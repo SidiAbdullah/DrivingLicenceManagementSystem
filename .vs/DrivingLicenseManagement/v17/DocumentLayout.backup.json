@@ -1,0 +1,103 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\all_my_projects\\DrivingLicenceManagementSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{554F40E3-CD13-4736-A39D-3E78A48208B9}|DrivingLicenseManagement.csproj|c:\\all_my_projects\\drivinglicencemanagementsystem\\dal\\dataaccesslayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{554F40E3-CD13-4736-A39D-3E78A48208B9}|DrivingLicenseManagement.csproj|solutionrelative:dal\\dataaccesslayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{554F40E3-CD13-4736-A39D-3E78A48208B9}|DrivingLicenseManagement.csproj|C:\\all_my_projects\\DrivingLicenceManagementSystem\\pl\\frmpeople.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{554F40E3-CD13-4736-A39D-3E78A48208B9}|DrivingLicenseManagement.csproj|solutionrelative:pl\\frmpeople.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{554F40E3-CD13-4736-A39D-3E78A48208B9}|DrivingLicenseManagement.csproj|c:\\all_my_projects\\drivinglicencemanagementsystem\\bl\\buisnesslayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{554F40E3-CD13-4736-A39D-3E78A48208B9}|DrivingLicenseManagement.csproj|solutionrelative:bl\\buisnesslayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{554F40E3-CD13-4736-A39D-3E78A48208B9}|DrivingLicenseManagement.csproj|c:\\all_my_projects\\drivinglicencemanagementsystem\\pl\\frmpeople.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{554F40E3-CD13-4736-A39D-3E78A48208B9}|DrivingLicenseManagement.csproj|solutionrelative:pl\\frmpeople.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{554F40E3-CD13-4736-A39D-3E78A48208B9}|DrivingLicenseManagement.csproj|C:\\all_my_projects\\DrivingLicenceManagementSystem\\pl\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{554F40E3-CD13-4736-A39D-3E78A48208B9}|DrivingLicenseManagement.csproj|solutionrelative:pl\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DataAccessLayer.cs",
+              "DocumentMoniker": "C:\\all_my_projects\\DrivingLicenceManagementSystem\\DAL\\DataAccessLayer.cs",
+              "RelativeDocumentMoniker": "DAL\\DataAccessLayer.cs",
+              "ToolTip": "C:\\all_my_projects\\DrivingLicenceManagementSystem\\DAL\\DataAccessLayer.cs*",
+              "RelativeToolTip": "DAL\\DataAccessLayer.cs*",
+              "ViewState": "AgIAAAEAAAAANDMzMzMLwAgAAABpAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-05T01:11:45.076Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "buisnessLayer.cs",
+              "DocumentMoniker": "C:\\all_my_projects\\DrivingLicenceManagementSystem\\BL\\buisnessLayer.cs",
+              "RelativeDocumentMoniker": "BL\\buisnessLayer.cs",
+              "ToolTip": "C:\\all_my_projects\\DrivingLicenceManagementSystem\\BL\\buisnessLayer.cs",
+              "RelativeToolTip": "BL\\buisnessLayer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-05T12:26:19.766Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmPeople.cs",
+              "DocumentMoniker": "C:\\all_my_projects\\DrivingLicenceManagementSystem\\PL\\frmPeople.cs",
+              "RelativeDocumentMoniker": "PL\\frmPeople.cs",
+              "ToolTip": "C:\\all_my_projects\\DrivingLicenceManagementSystem\\PL\\frmPeople.cs",
+              "RelativeToolTip": "PL\\frmPeople.cs",
+              "ViewState": "AgIAAAwAAABgZmZmZmYkwBIAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-05T00:48:19.457Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmPeople.cs [Design]",
+              "DocumentMoniker": "C:\\all_my_projects\\DrivingLicenceManagementSystem\\PL\\frmPeople.cs",
+              "RelativeDocumentMoniker": "PL\\frmPeople.cs",
+              "ToolTip": "C:\\all_my_projects\\DrivingLicenceManagementSystem\\PL\\frmPeople.cs [Design]",
+              "RelativeToolTip": "PL\\frmPeople.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T18:07:52.614Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmMain.cs [Design]",
+              "DocumentMoniker": "C:\\all_my_projects\\DrivingLicenceManagementSystem\\PL\\frmMain.cs",
+              "RelativeDocumentMoniker": "PL\\frmMain.cs",
+              "ToolTip": "C:\\all_my_projects\\DrivingLicenceManagementSystem\\PL\\frmMain.cs [Design]",
+              "RelativeToolTip": "PL\\frmMain.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T18:07:48.936Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

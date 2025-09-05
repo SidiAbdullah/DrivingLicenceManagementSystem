@@ -10,3 +10,15 @@ C:\DrivingLicenseManagement\obj\Debug\DrivingLicenseManagement.exe
 C:\DrivingLicenseManagement\obj\Debug\DrivingLicenseManagement.pdb
 C:\DrivingLicenseManagement\obj\Debug\DrivingLicenseManagement.exe.config
 C:\DrivingLicenseManagement\obj\Debug\DrivingLicenseManagement.PL.frmPeople.resources
+C:\all_my_projects\DrivingLicenceManagementSystem\bin\Debug\DrivingLicenseManagement.exe.config
+C:\all_my_projects\DrivingLicenceManagementSystem\bin\Debug\DrivingLicenseManagement.exe
+C:\all_my_projects\DrivingLicenceManagementSystem\bin\Debug\DrivingLicenseManagement.pdb
+C:\all_my_projects\DrivingLicenceManagementSystem\obj\Debug\DrivingLicenseManagement.csproj.AssemblyReference.cache
+C:\all_my_projects\DrivingLicenceManagementSystem\obj\Debug\DrivingLicenseManagement.exe.config
+C:\all_my_projects\DrivingLicenceManagementSystem\obj\Debug\DrivingLicenseManagement.frmMain.resources
+C:\all_my_projects\DrivingLicenceManagementSystem\obj\Debug\DrivingLicenseManagement.PL.frmPeople.resources
+C:\all_my_projects\DrivingLicenceManagementSystem\obj\Debug\DrivingLicenseManagement.Properties.Resources.resources
+C:\all_my_projects\DrivingLicenceManagementSystem\obj\Debug\DrivingLicenseManagement.csproj.GenerateResource.cache
+C:\all_my_projects\DrivingLicenceManagementSystem\obj\Debug\DrivingLicenseManagement.csproj.CoreCompileInputs.cache
+C:\all_my_projects\DrivingLicenceManagementSystem\obj\Debug\DrivingLicenseManagement.exe
+C:\all_my_projects\DrivingLicenceManagementSystem\obj\Debug\DrivingLicenseManagement.pdb

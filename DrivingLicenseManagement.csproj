@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BL\buisnessLayer.cs" />
+    <Compile Include="DAL\DataAccessLayer.cs" />
     <Compile Include="PL\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,9 +109,9 @@
   <ItemGroup>
     <None Include="Resources\MAP.jpeg" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="BL\" />
-    <Folder Include="DAL\" />
+    <None Include="Resources\people1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
