@@ -1,0 +1,205 @@
+﻿namespace DrivingLicenseManagement.PL
+{
+    partial class frmPeople
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtFilter = new System.Windows.Forms.TextBox();
+            this.cmbFilterBy = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dgvPeopleList = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnCLose = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblRecodrs = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnAddPerson = new System.Windows.Forms.Button();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPeopleList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnAddPerson);
+            this.groupBox1.Controls.Add(this.txtFilter);
+            this.groupBox1.Controls.Add(this.cmbFilterBy);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.dgvPeopleList);
+            this.groupBox1.Location = new System.Drawing.Point(12, 178);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1165, 434);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "People Infos";
+            // 
+            // txtFilter
+            // 
+            this.txtFilter.BackColor = System.Drawing.SystemColors.Control;
+            this.txtFilter.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtFilter.Enabled = false;
+            this.txtFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.txtFilter.Location = new System.Drawing.Point(305, 61);
+            this.txtFilter.Name = "txtFilter";
+            this.txtFilter.Size = new System.Drawing.Size(233, 23);
+            this.txtFilter.TabIndex = 3;
+            this.txtFilter.Visible = false;
+            // 
+            // cmbFilterBy
+            // 
+            this.cmbFilterBy.FormattingEnabled = true;
+            this.cmbFilterBy.Items.AddRange(new object[] {
+            "x",
+            "y",
+            "z"});
+            this.cmbFilterBy.Location = new System.Drawing.Point(106, 59);
+            this.cmbFilterBy.Name = "cmbFilterBy";
+            this.cmbFilterBy.Size = new System.Drawing.Size(178, 28);
+            this.cmbFilterBy.TabIndex = 2;
+            this.cmbFilterBy.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.label1.Location = new System.Drawing.Point(14, 61);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(86, 22);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Filter By :";
+            // 
+            // dgvPeopleList
+            // 
+            this.dgvPeopleList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPeopleList.Location = new System.Drawing.Point(0, 111);
+            this.dgvPeopleList.Name = "dgvPeopleList";
+            this.dgvPeopleList.RowHeadersWidth = 62;
+            this.dgvPeopleList.RowTemplate.Height = 28;
+            this.dgvPeopleList.Size = new System.Drawing.Size(1165, 320);
+            this.dgvPeopleList.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Blue;
+            this.label2.Location = new System.Drawing.Point(481, 134);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(227, 32);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Menage People";
+            // 
+            // btnCLose
+            // 
+            this.btnCLose.Location = new System.Drawing.Point(1084, 618);
+            this.btnCLose.Name = "btnCLose";
+            this.btnCLose.Size = new System.Drawing.Size(75, 34);
+            this.btnCLose.TabIndex = 5;
+            this.btnCLose.Text = "Close";
+            this.btnCLose.UseVisualStyleBackColor = true;
+            this.btnCLose.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(26, 625);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(86, 20);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "#Recodrs :";
+            // 
+            // lblRecodrs
+            // 
+            this.lblRecodrs.AutoSize = true;
+            this.lblRecodrs.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.lblRecodrs.ForeColor = System.Drawing.Color.Black;
+            this.lblRecodrs.Location = new System.Drawing.Point(128, 625);
+            this.lblRecodrs.Name = "lblRecodrs";
+            this.lblRecodrs.Size = new System.Drawing.Size(27, 20);
+            this.lblRecodrs.TabIndex = 7;
+            this.lblRecodrs.Text = "??";
+            this.lblRecodrs.Visible = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::DrivingLicenseManagement.Properties.Resources.People_400;
+            this.pictureBox1.Location = new System.Drawing.Point(504, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(168, 119);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnAddPerson
+            // 
+            this.btnAddPerson.Image = global::DrivingLicenseManagement.Properties.Resources.AddPerson_32;
+            this.btnAddPerson.Location = new System.Drawing.Point(1072, 51);
+            this.btnAddPerson.Name = "btnAddPerson";
+            this.btnAddPerson.Size = new System.Drawing.Size(75, 49);
+            this.btnAddPerson.TabIndex = 4;
+            this.btnAddPerson.UseVisualStyleBackColor = true;
+            // 
+            // frmPeople
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1184, 687);
+            this.Controls.Add(this.lblRecodrs);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.btnCLose);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.groupBox1);
+            this.Name = "frmPeople";
+            this.Text = "People";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPeopleList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox txtFilter;
+        private System.Windows.Forms.ComboBox cmbFilterBy;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dgvPeopleList;
+        private System.Windows.Forms.Button btnAddPerson;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnCLose;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblRecodrs;
+    }
+}
