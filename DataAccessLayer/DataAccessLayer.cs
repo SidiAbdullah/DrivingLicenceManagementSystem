@@ -37,8 +37,9 @@ namespace DrivingLicenseManagement.DAL
 
             return dt;
         }
-        public void ExecuteNonQuery(string storedProcedure, params SqlParameter[] parameters)
+        public int ExecuteNonQuery(string storedProcedure, params SqlParameter[] parameters)
         {
+            int recordsCount = 0;
             try
             {
                 connection.Open();
@@ -48,12 +49,34 @@ namespace DrivingLicenseManagement.DAL
                 if (parameters != null)
                     command.Parameters.AddRange(parameters);
 
-                command.ExecuteNonQuery();
+                recordsCount = command.ExecuteNonQuery();
             }
             finally
             {
                 connection.Close();
             }
+            return recordsCount;
+        }
+        // ExecuteScalar() for Searching in people
+        public object ExecuteScalar(string storedProcedure, params SqlParameter[] parameters)
+        {
+            object result = null;
+            try
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand(storedProcedure, connection);
+                command.CommandType = CommandType.StoredProcedure;
+
+                if (parameters != null)
+                    command.Parameters.AddRange(parameters);
+
+                result = command.ExecuteScalar();
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return result;
         }
     }
 }

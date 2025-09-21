@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.ptbMain = new System.Windows.Forms.PictureBox();
             this.applicationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.peopleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.driversToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.accountSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ptbMain = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbMain)).BeginInit();
             this.SuspendLayout();
@@ -54,18 +54,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(1149, 48);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // ptbMain
-            // 
-            this.ptbMain.BackColor = System.Drawing.Color.Transparent;
-            this.ptbMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ptbMain.Image = global::DrivingLicenseManagement.Properties.Resources.Logo_Final;
-            this.ptbMain.Location = new System.Drawing.Point(0, 48);
-            this.ptbMain.Name = "ptbMain";
-            this.ptbMain.Size = new System.Drawing.Size(1149, 494);
-            this.ptbMain.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.ptbMain.TabIndex = 3;
-            this.ptbMain.TabStop = false;
             // 
             // applicationsToolStripMenuItem
             // 
@@ -107,6 +95,18 @@
             this.accountSToolStripMenuItem.Name = "accountSToolStripMenuItem";
             this.accountSToolStripMenuItem.Size = new System.Drawing.Size(265, 42);
             this.accountSToolStripMenuItem.Text = "Account Settings";
+            // 
+            // ptbMain
+            // 
+            this.ptbMain.BackColor = System.Drawing.Color.Transparent;
+            this.ptbMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ptbMain.Image = global::DrivingLicenseManagement.Properties.Resources.Logo_Final;
+            this.ptbMain.Location = new System.Drawing.Point(0, 48);
+            this.ptbMain.Name = "ptbMain";
+            this.ptbMain.Size = new System.Drawing.Size(1149, 494);
+            this.ptbMain.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.ptbMain.TabIndex = 3;
+            this.ptbMain.TabStop = false;
             // 
             // frmMain
             // 
