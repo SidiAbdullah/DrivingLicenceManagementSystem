@@ -35,9 +35,12 @@ namespace DrivingLicenseManagement.PL
         {
             try
             {
-                bl.deletePerson(dgvPeopleList.CurrentRow.Cells[0].Value.ToString());
-                dgvPeopleList.DataSource = bl.getAllPeople();
-                lblRecodrs.Text = dgvPeopleList.RowCount.ToString();
+                if (MessageBox.Show("Are you sure you want to delete?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.OK)
+                {
+                    bl.deletePerson(dgvPeopleList.CurrentRow.Cells[0].Value.ToString());
+                    dgvPeopleList.DataSource = bl.getAllPeople();
+                    lblRecodrs.Text = dgvPeopleList.RowCount.ToString();
+                }
             }
             catch (SqlException ex)
             {
