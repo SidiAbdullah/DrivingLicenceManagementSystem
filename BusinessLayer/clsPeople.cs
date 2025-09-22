@@ -71,7 +71,8 @@ namespace DrivingLicenseManagement.BL
 
         public void deletePerson(string nationalNo)
         {
-            SqlParameter[] parameters = { new SqlParameter("@NationalNo", nationalNo) };
+            SqlParameter[] parameters = new SqlParameter[1];
+            parameters[0] = new SqlParameter("@NationalNo", nationalNo);
             dal.ExecuteNonQuery("deletePerson", parameters);
         }
 

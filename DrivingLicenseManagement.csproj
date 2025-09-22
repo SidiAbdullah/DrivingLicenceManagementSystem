@@ -139,5 +139,20 @@
   <ItemGroup>
     <None Include="Icons\Icons\Logo Final.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Icons\PersonDetails 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Icons\edit 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Icons\Delete 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Icons\send email 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Icons\call 32.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
