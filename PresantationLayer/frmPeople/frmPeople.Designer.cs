@@ -30,26 +30,26 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnAddPerson = new System.Windows.Forms.Button();
             this.txtFilter = new System.Windows.Forms.TextBox();
             this.cmbFilterBy = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvPeopleList = new System.Windows.Forms.DataGridView();
+            this.cmsPeople = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmShowDetails = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsmAddNewPerson = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmEdit = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmDelete = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsmSendEmail = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmPhoneCall = new System.Windows.Forms.ToolStripMenuItem();
             this.label2 = new System.Windows.Forms.Label();
             this.btnCLose = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.lblRecodrs = new System.Windows.Forms.Label();
-            this.cmsPeople = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsm1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnAddPerson = new System.Windows.Forms.Button();
-            this.tsmShowDetails = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmAddNewPerson = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmEdit = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmDelete = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmSendEmail = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmPhoneCall = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPeopleList)).BeginInit();
             this.cmsPeople.SuspendLayout();
@@ -70,15 +70,25 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "People Infos";
             // 
+            // btnAddPerson
+            // 
+            this.btnAddPerson.Image = global::DrivingLicenseManagement.Properties.Resources.AddPerson_32;
+            this.btnAddPerson.Location = new System.Drawing.Point(1072, 51);
+            this.btnAddPerson.Name = "btnAddPerson";
+            this.btnAddPerson.Size = new System.Drawing.Size(75, 49);
+            this.btnAddPerson.TabIndex = 4;
+            this.btnAddPerson.UseVisualStyleBackColor = true;
+            this.btnAddPerson.Click += new System.EventHandler(this.btnAddPerson_Click);
+            // 
             // txtFilter
             // 
-            this.txtFilter.BackColor = System.Drawing.SystemColors.Control;
+            this.txtFilter.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtFilter.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtFilter.Enabled = false;
             this.txtFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtFilter.Location = new System.Drawing.Point(305, 61);
+            this.txtFilter.Location = new System.Drawing.Point(350, 62);
             this.txtFilter.Name = "txtFilter";
-            this.txtFilter.Size = new System.Drawing.Size(233, 23);
+            this.txtFilter.Size = new System.Drawing.Size(216, 23);
             this.txtFilter.TabIndex = 3;
             this.txtFilter.Visible = false;
             // 
@@ -86,12 +96,20 @@
             // 
             this.cmbFilterBy.FormattingEnabled = true;
             this.cmbFilterBy.Items.AddRange(new object[] {
-            "x",
-            "y",
-            "z"});
+            "None",
+            "PersonID",
+            "NationalNo",
+            "FirstName",
+            "SecondName",
+            "ThirdName",
+            "LastName",
+            "Nationality",
+            "Gendor",
+            "Phone",
+            "Email"});
             this.cmbFilterBy.Location = new System.Drawing.Point(106, 59);
             this.cmbFilterBy.Name = "cmbFilterBy";
-            this.cmbFilterBy.Size = new System.Drawing.Size(178, 28);
+            this.cmbFilterBy.Size = new System.Drawing.Size(216, 28);
             this.cmbFilterBy.TabIndex = 2;
             this.cmbFilterBy.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -115,6 +133,75 @@
             this.dgvPeopleList.RowTemplate.Height = 28;
             this.dgvPeopleList.Size = new System.Drawing.Size(1165, 320);
             this.dgvPeopleList.TabIndex = 0;
+            // 
+            // cmsPeople
+            // 
+            this.cmsPeople.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.cmsPeople.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmShowDetails,
+            this.toolStripSeparator1,
+            this.tsmAddNewPerson,
+            this.tsmEdit,
+            this.tsmDelete,
+            this.toolStripSeparator2,
+            this.tsmSendEmail,
+            this.tsmPhoneCall});
+            this.cmsPeople.Name = "contextMenuStrip1";
+            this.cmsPeople.Size = new System.Drawing.Size(225, 208);
+            // 
+            // tsmShowDetails
+            // 
+            this.tsmShowDetails.Image = global::DrivingLicenseManagement.Properties.Resources.PersonDetails_32;
+            this.tsmShowDetails.Name = "tsmShowDetails";
+            this.tsmShowDetails.Size = new System.Drawing.Size(224, 32);
+            this.tsmShowDetails.Text = "Show Details";
+            this.tsmShowDetails.Click += new System.EventHandler(this.tsmShowDetails_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(221, 6);
+            // 
+            // tsmAddNewPerson
+            // 
+            this.tsmAddNewPerson.Image = global::DrivingLicenseManagement.Properties.Resources.AddPerson_321;
+            this.tsmAddNewPerson.Name = "tsmAddNewPerson";
+            this.tsmAddNewPerson.Size = new System.Drawing.Size(224, 32);
+            this.tsmAddNewPerson.Text = "Add New Person";
+            // 
+            // tsmEdit
+            // 
+            this.tsmEdit.Image = global::DrivingLicenseManagement.Properties.Resources.edit_32;
+            this.tsmEdit.Name = "tsmEdit";
+            this.tsmEdit.Size = new System.Drawing.Size(224, 32);
+            this.tsmEdit.Text = "Edit";
+            // 
+            // tsmDelete
+            // 
+            this.tsmDelete.Image = global::DrivingLicenseManagement.Properties.Resources.Delete_32;
+            this.tsmDelete.Name = "tsmDelete";
+            this.tsmDelete.Size = new System.Drawing.Size(224, 32);
+            this.tsmDelete.Text = "Delete";
+            this.tsmDelete.Click += new System.EventHandler(this.tsmDelete_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(221, 6);
+            // 
+            // tsmSendEmail
+            // 
+            this.tsmSendEmail.Image = global::DrivingLicenseManagement.Properties.Resources.send_email_32;
+            this.tsmSendEmail.Name = "tsmSendEmail";
+            this.tsmSendEmail.Size = new System.Drawing.Size(224, 32);
+            this.tsmSendEmail.Text = "Send Email";
+            // 
+            // tsmPhoneCall
+            // 
+            this.tsmPhoneCall.Image = global::DrivingLicenseManagement.Properties.Resources.call_32;
+            this.tsmPhoneCall.Name = "tsmPhoneCall";
+            this.tsmPhoneCall.Size = new System.Drawing.Size(224, 32);
+            this.tsmPhoneCall.Text = "Phone Call";
             // 
             // label2
             // 
@@ -160,36 +247,11 @@
             this.lblRecodrs.Text = "??";
             this.lblRecodrs.Visible = false;
             // 
-            // cmsPeople
-            // 
-            this.cmsPeople.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.cmsPeople.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmShowDetails,
-            this.toolStripSeparator1,
-            this.tsmAddNewPerson,
-            this.tsmEdit,
-            this.tsmDelete,
-            this.toolStripSeparator2,
-            this.tsmSendEmail,
-            this.tsmPhoneCall});
-            this.cmsPeople.Name = "contextMenuStrip1";
-            this.cmsPeople.Size = new System.Drawing.Size(249, 241);
-            // 
             // tsm1
             // 
             this.tsm1.Name = "tsm1";
             this.tsm1.Size = new System.Drawing.Size(240, 32);
             this.tsm1.Text = "Show Details";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(245, 6);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(245, 6);
             // 
             // pictureBox1
             // 
@@ -200,59 +262,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
-            // 
-            // btnAddPerson
-            // 
-            this.btnAddPerson.Image = global::DrivingLicenseManagement.Properties.Resources.AddPerson_32;
-            this.btnAddPerson.Location = new System.Drawing.Point(1072, 51);
-            this.btnAddPerson.Name = "btnAddPerson";
-            this.btnAddPerson.Size = new System.Drawing.Size(75, 49);
-            this.btnAddPerson.TabIndex = 4;
-            this.btnAddPerson.UseVisualStyleBackColor = true;
-            // 
-            // tsmShowDetails
-            // 
-            this.tsmShowDetails.Image = global::DrivingLicenseManagement.Properties.Resources.PersonDetails_32;
-            this.tsmShowDetails.Name = "tsmShowDetails";
-            this.tsmShowDetails.Size = new System.Drawing.Size(248, 32);
-            this.tsmShowDetails.Text = "Show Details";
-            this.tsmShowDetails.Click += new System.EventHandler(this.tsmShowDetails_Click);
-            // 
-            // tsmAddNewPerson
-            // 
-            this.tsmAddNewPerson.Image = global::DrivingLicenseManagement.Properties.Resources.AddPerson_321;
-            this.tsmAddNewPerson.Name = "tsmAddNewPerson";
-            this.tsmAddNewPerson.Size = new System.Drawing.Size(248, 32);
-            this.tsmAddNewPerson.Text = "Add New Person";
-            // 
-            // tsmEdit
-            // 
-            this.tsmEdit.Image = global::DrivingLicenseManagement.Properties.Resources.edit_32;
-            this.tsmEdit.Name = "tsmEdit";
-            this.tsmEdit.Size = new System.Drawing.Size(248, 32);
-            this.tsmEdit.Text = "Edit";
-            // 
-            // tsmDelete
-            // 
-            this.tsmDelete.Image = global::DrivingLicenseManagement.Properties.Resources.Delete_32;
-            this.tsmDelete.Name = "tsmDelete";
-            this.tsmDelete.Size = new System.Drawing.Size(248, 32);
-            this.tsmDelete.Text = "Delete";
-            this.tsmDelete.Click += new System.EventHandler(this.tsmDelete_Click);
-            // 
-            // tsmSendEmail
-            // 
-            this.tsmSendEmail.Image = global::DrivingLicenseManagement.Properties.Resources.send_email_32;
-            this.tsmSendEmail.Name = "tsmSendEmail";
-            this.tsmSendEmail.Size = new System.Drawing.Size(248, 32);
-            this.tsmSendEmail.Text = "Send Email";
-            // 
-            // tsmPhoneCall
-            // 
-            this.tsmPhoneCall.Image = global::DrivingLicenseManagement.Properties.Resources.call_32;
-            this.tsmPhoneCall.Name = "tsmPhoneCall";
-            this.tsmPhoneCall.Size = new System.Drawing.Size(248, 32);
-            this.tsmPhoneCall.Text = "Phone Call";
             // 
             // frmPeople
             // 

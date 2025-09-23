@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DrivingLicenseManagement.PresantationLayer;
+using System;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
@@ -22,7 +23,6 @@ namespace DrivingLicenseManagement.PL
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txtFilter.Text = cmbFilterBy.SelectedItem.ToString();
             txtFilter.Visible = true;
         }
 
@@ -47,6 +47,12 @@ namespace DrivingLicenseManagement.PL
                 MessageBox.Show(ex.Message, "Delete Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+        }
+
+        private void btnAddPerson_Click(object sender, EventArgs e)
+        {
+            frmAddEditPerson addEditPerson = new frmAddEditPerson();
+            addEditPerson.ShowDialog();
         }
     }
 }

@@ -48,16 +48,22 @@
   <ItemGroup>
     <Compile Include="BusinessLayer\clsPeople.cs" />
     <Compile Include="DataAccessLayer\DataAccessLayer.cs" />
+    <Compile Include="PresantationLayer\frmPeople\frmAddEditPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresantationLayer\frmPeople\frmAddEditPerson.Designer.cs">
+      <DependentUpon>frmAddEditPerson.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresantationLayer\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PresantationLayer\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresantationLayer\frmPeople.cs">
+    <Compile Include="PresantationLayer\frmPeople\frmPeople.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresantationLayer\frmPeople.Designer.cs">
+    <Compile Include="PresantationLayer\frmPeople\frmPeople.Designer.cs">
       <DependentUpon>frmPeople.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -65,7 +71,10 @@
     <EmbeddedResource Include="PresantationLayer\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresantationLayer\frmPeople.resx">
+    <EmbeddedResource Include="PresantationLayer\frmPeople\frmAddEditPerson.resx">
+      <DependentUpon>frmAddEditPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresantationLayer\frmPeople\frmPeople.resx">
       <DependentUpon>frmPeople.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -153,6 +162,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Icons\Icons\call 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Icons\Save 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Icons\Close 32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -22,3 +22,4 @@ C:\all_my_projects\DrivingLicenceManagementSystem\obj\Debug\DrivingLicenseManage
 C:\all_my_projects\DrivingLicenceManagementSystem\obj\Debug\DrivingLicenseManagement.csproj.CoreCompileInputs.cache
 C:\all_my_projects\DrivingLicenceManagementSystem\obj\Debug\DrivingLicenseManagement.exe
 C:\all_my_projects\DrivingLicenceManagementSystem\obj\Debug\DrivingLicenseManagement.pdb
+C:\all_my_projects\DrivingLicenceManagementSystem\obj\Debug\DrivingLicenseManagement.PresantationLayer.frmAddEditPerson.resources
