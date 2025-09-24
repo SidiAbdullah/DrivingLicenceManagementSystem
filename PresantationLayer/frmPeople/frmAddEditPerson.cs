@@ -21,5 +21,10 @@ namespace DrivingLicenseManagement.PresantationLayer
         {
             this.Close();
         }
+        public bool btnSaveClicked = false;
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            btnSaveClicked = true;
+        }
     }
 }

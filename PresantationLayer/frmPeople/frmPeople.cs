@@ -48,11 +48,40 @@ namespace DrivingLicenseManagement.PL
             }
 
         }
-
+        // we are here :
         private void btnAddPerson_Click(object sender, EventArgs e)
         {
             frmAddEditPerson addEditPerson = new frmAddEditPerson();
             addEditPerson.ShowDialog();
+
+            if (addEditPerson.btnSaveClicked)
+            {
+                try
+                {
+                    bl.addNewPerson(
+                        addEditPerson.txtNationalNo.Text,
+                        addEditPerson.txtFirst.Text,
+                        addEditPerson.txtSecond.Text,
+                        addEditPerson.txtThird.Text,
+                        addEditPerson.txtLast.Text,
+                        addEditPerson.dtpDateOfBirth.Value,
+                        Convert.ToByte(addEditPerson.cmbGender.SelectedValue), // here
+                        addEditPerson.txtAddress.Text,
+                        addEditPerson.txtPhone.Text,
+                        addEditPerson.txtEmail.Text,
+                        Convert.ToInt32(addEditPerson.cmbNationality.SelectedValue), // here
+                        addEditPerson.txtImagePath.Text
+                    );
+
+                    dgvPeopleList.DataSource = bl.getAllPeople();
+                    lblRecodrs.Text = (dgvPeopleList.RowCount - 1).ToString();
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show(ex.Message, "Add Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
+
     }
 }

@@ -23,3 +23,4 @@ C:\all_my_projects\DrivingLicenceManagementSystem\obj\Debug\DrivingLicenseManage
 C:\all_my_projects\DrivingLicenceManagementSystem\obj\Debug\DrivingLicenseManagement.exe
 C:\all_my_projects\DrivingLicenceManagementSystem\obj\Debug\DrivingLicenseManagement.pdb
 C:\all_my_projects\DrivingLicenceManagementSystem\obj\Debug\DrivingLicenseManagement.PresantationLayer.frmAddEditPerson.resources
+C:\all_my_projects\DrivingLicenceManagementSystem\obj\Debug\DrivingLicenseManagement.PresantationLayer.frmPeople.frmPersonDetails.resources
