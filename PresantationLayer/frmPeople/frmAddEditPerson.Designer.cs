@@ -35,7 +35,6 @@
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.ptbPersonImage = new System.Windows.Forms.PictureBox();
-            this.txtCountry = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -44,7 +43,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtGendor = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtNationalNo = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -60,19 +58,22 @@
             this.lblPerson = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblAddUpdatePerson = new System.Windows.Forms.Label();
+            this.cmbGender = new System.Windows.Forms.ComboBox();
+            this.cmbNationality = new System.Windows.Forms.ComboBox();
             this.grbPersonInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbPersonImage)).BeginInit();
             this.SuspendLayout();
             // 
             // grbPersonInfo
             // 
+            this.grbPersonInfo.Controls.Add(this.cmbNationality);
+            this.grbPersonInfo.Controls.Add(this.cmbGender);
             this.grbPersonInfo.Controls.Add(this.dtpDateOfBirth);
             this.grbPersonInfo.Controls.Add(this.btnClose);
             this.grbPersonInfo.Controls.Add(this.btnSave);
             this.grbPersonInfo.Controls.Add(this.linkLabel2);
             this.grbPersonInfo.Controls.Add(this.linkLabel1);
             this.grbPersonInfo.Controls.Add(this.ptbPersonImage);
-            this.grbPersonInfo.Controls.Add(this.txtCountry);
             this.grbPersonInfo.Controls.Add(this.label13);
             this.grbPersonInfo.Controls.Add(this.txtPhone);
             this.grbPersonInfo.Controls.Add(this.label12);
@@ -81,7 +82,6 @@
             this.grbPersonInfo.Controls.Add(this.label10);
             this.grbPersonInfo.Controls.Add(this.txtEmail);
             this.grbPersonInfo.Controls.Add(this.label9);
-            this.grbPersonInfo.Controls.Add(this.txtGendor);
             this.grbPersonInfo.Controls.Add(this.label8);
             this.grbPersonInfo.Controls.Add(this.txtNationalNo);
             this.grbPersonInfo.Controls.Add(this.label7);
@@ -163,15 +163,9 @@
             this.ptbPersonImage.Location = new System.Drawing.Point(828, 114);
             this.ptbPersonImage.Name = "ptbPersonImage";
             this.ptbPersonImage.Size = new System.Drawing.Size(189, 208);
+            this.ptbPersonImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbPersonImage.TabIndex = 27;
             this.ptbPersonImage.TabStop = false;
-            // 
-            // txtCountry
-            // 
-            this.txtCountry.Location = new System.Drawing.Point(609, 221);
-            this.txtCountry.Name = "txtCountry";
-            this.txtCountry.Size = new System.Drawing.Size(189, 26);
-            this.txtCountry.TabIndex = 26;
             // 
             // label13
             // 
@@ -244,13 +238,6 @@
             this.label9.Size = new System.Drawing.Size(71, 22);
             this.label9.TabIndex = 17;
             this.label9.Text = "Email :";
-            // 
-            // txtGendor
-            // 
-            this.txtGendor.Location = new System.Drawing.Point(171, 166);
-            this.txtGendor.Name = "txtGendor";
-            this.txtGendor.Size = new System.Drawing.Size(189, 26);
-            this.txtGendor.TabIndex = 16;
             // 
             // label8
             // 
@@ -388,6 +375,26 @@
             this.lblAddUpdatePerson.TabIndex = 3;
             this.lblAddUpdatePerson.Text = "Update Person";
             // 
+            // cmbGender
+            // 
+            this.cmbGender.FormattingEnabled = true;
+            this.cmbGender.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.cmbGender.Location = new System.Drawing.Point(171, 165);
+            this.cmbGender.Name = "cmbGender";
+            this.cmbGender.Size = new System.Drawing.Size(189, 28);
+            this.cmbGender.TabIndex = 33;
+            this.cmbGender.SelectedIndexChanged += new System.EventHandler(this.cmbGender_SelectedIndexChanged);
+            // 
+            // cmbNationality
+            // 
+            this.cmbNationality.FormattingEnabled = true;
+            this.cmbNationality.Location = new System.Drawing.Point(609, 219);
+            this.cmbNationality.Name = "cmbNationality";
+            this.cmbNationality.Size = new System.Drawing.Size(189, 28);
+            this.cmbNationality.TabIndex = 34;
+            // 
             // frmAddEditPerson
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -412,7 +419,6 @@
         #endregion
         private System.Windows.Forms.Label lblPerson;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblAddUpdatePerson;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -437,10 +443,11 @@
         public System.Windows.Forms.TextBox txtNationalNo;
         public System.Windows.Forms.TextBox txtAddress;
         public System.Windows.Forms.TextBox txtEmail;
-        public System.Windows.Forms.TextBox txtGendor;
         public System.Windows.Forms.PictureBox ptbPersonImage;
-        public System.Windows.Forms.TextBox txtCountry;
         public System.Windows.Forms.TextBox txtPhone;
         public System.Windows.Forms.DateTimePicker dtpDateOfBirth;
+        public System.Windows.Forms.Label lblAddUpdatePerson;
+        public System.Windows.Forms.ComboBox cmbGender;
+        public System.Windows.Forms.ComboBox cmbNationality;
     }
 }

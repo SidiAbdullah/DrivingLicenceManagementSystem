@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLayer\clsCountries.cs" />
     <Compile Include="BusinessLayer\clsPeople.cs" />
     <Compile Include="DataAccessLayer\DataAccessLayer.cs" />
     <Compile Include="PresantationLayer\frmPeople\frmAddEditPerson.cs">

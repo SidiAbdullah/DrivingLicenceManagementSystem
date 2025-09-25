@@ -1,7 +1,9 @@
 ﻿using DrivingLicenseManagement.PresantationLayer;
 using System;
 using System.Data.SqlClient;
+using System.IO;
 using System.Windows.Forms;
+using System.Drawing.Imaging;
 
 namespace DrivingLicenseManagement.PL
 {
@@ -48,16 +50,29 @@ namespace DrivingLicenseManagement.PL
             }
 
         }
-        // we are here :
-        private void btnAddPerson_Click(object sender, EventArgs e)
+
+        private void btnAddPerson_Click_1(object sender, EventArgs e)
         {
             frmAddEditPerson addEditPerson = new frmAddEditPerson();
+            addEditPerson.lblAddUpdatePerson.Text = "Add Person";
             addEditPerson.ShowDialog();
 
             if (addEditPerson.btnSaveClicked)
             {
                 try
                 {
+                    byte gendorAsByte = (addEditPerson.cmbGender.SelectedValue.ToString() == "Male") ? (byte)0 : (byte)1;
+
+                    byte[] imageBytes = null;
+                    if (addEditPerson.ptbPersonImage.Image != null)
+                    {
+                        using (MemoryStream ms = new MemoryStream())
+                        {
+                            addEditPerson.ptbPersonImage.Image.Save(ms, ImageFormat.Png);
+                            imageBytes = ms.ToArray();
+                        }
+                    }
+
                     bl.addNewPerson(
                         addEditPerson.txtNationalNo.Text,
                         addEditPerson.txtFirst.Text,
@@ -65,12 +80,12 @@ namespace DrivingLicenseManagement.PL
                         addEditPerson.txtThird.Text,
                         addEditPerson.txtLast.Text,
                         addEditPerson.dtpDateOfBirth.Value,
-                        Convert.ToByte(addEditPerson.cmbGender.SelectedValue), // here
+                        gendorAsByte,
                         addEditPerson.txtAddress.Text,
                         addEditPerson.txtPhone.Text,
                         addEditPerson.txtEmail.Text,
-                        Convert.ToInt32(addEditPerson.cmbNationality.SelectedValue), // here
-                        addEditPerson.txtImagePath.Text
+                        Convert.ToInt32(addEditPerson.cmbNationality.SelectedValue),
+                        imageBytes
                     );
 
                     dgvPeopleList.DataSource = bl.getAllPeople();
@@ -82,6 +97,5 @@ namespace DrivingLicenseManagement.PL
                 }
             }
         }
-
     }
 }

@@ -28,16 +28,16 @@ namespace DrivingLicenseManagement.BL
         public void addNewPerson(
             string nationalNo, string firstName, string secondName, string thirdName, string lastName,
             DateTime dateOfBirth, byte gendor, string address, string phone, string email,
-            int nationalityCountryID, string imagePath)
+            int nationalityCountryID, byte[] image)
         {
             string[] paramNames = {
                 "@NationalNo","@FirstName","@SecondName","@ThirdName","@LastName",
-                "@DateOfBirth","@Gendor","@Address","@Phone","@Email","@NationalityCountryID","@ImagePath"
+                "@DateOfBirth","@Gendor","@Address","@Phone","@Email","@NationalityCountryID","@Image"
             };
 
             object[] values = {
                 nationalNo, firstName, secondName, thirdName, lastName,
-                dateOfBirth, gendor, address, phone, email, nationalityCountryID, imagePath
+                dateOfBirth, gendor, address, phone, email, nationalityCountryID, image
             };
 
             SqlParameter[] parameters = new SqlParameter[paramNames.Length];
@@ -50,16 +50,16 @@ namespace DrivingLicenseManagement.BL
         public void updatePerson(
             string nationalNo, string firstName, string secondName, string thirdName, string lastName,
             DateTime dateOfBirth, byte gendor, string address, string phone, string email,
-            int nationalityCountryID, string imagePath)
+            int nationalityCountryID, byte[] image)
         {
             string[] paramNames = {
                 "@NationalNo","@FirstName","@SecondName","@ThirdName","@LastName",
-                "@DateOfBirth","@Gendor","@Address","@Phone","@Email","@NationalityCountryID","@ImagePath"
+                "@DateOfBirth","@Gendor","@Address","@Phone","@Email","@NationalityCountryID","@Image"
             };
 
             object[] values = {
                 nationalNo, firstName, secondName, thirdName, lastName,
-                dateOfBirth, gendor, address, phone, email, nationalityCountryID, imagePath
+                dateOfBirth, gendor, address, phone, email, nationalityCountryID, image
             };
 
             SqlParameter[] parameters = new SqlParameter[paramNames.Length];
