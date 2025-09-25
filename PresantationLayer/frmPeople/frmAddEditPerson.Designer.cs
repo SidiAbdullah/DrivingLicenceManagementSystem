@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.grbPersonInfo = new System.Windows.Forms.GroupBox();
+            this.cmbNationality = new System.Windows.Forms.ComboBox();
+            this.cmbGender = new System.Windows.Forms.ComboBox();
             this.dtpDateOfBirth = new System.Windows.Forms.DateTimePicker();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
@@ -56,10 +58,8 @@
             this.txtFirst = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lblPerson = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblPersonID = new System.Windows.Forms.Label();
             this.lblAddUpdatePerson = new System.Windows.Forms.Label();
-            this.cmbGender = new System.Windows.Forms.ComboBox();
-            this.cmbNationality = new System.Windows.Forms.ComboBox();
             this.grbPersonInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbPersonImage)).BeginInit();
             this.SuspendLayout();
@@ -99,6 +99,26 @@
             this.grbPersonInfo.Size = new System.Drawing.Size(1056, 506);
             this.grbPersonInfo.TabIndex = 0;
             this.grbPersonInfo.TabStop = false;
+            // 
+            // cmbNationality
+            // 
+            this.cmbNationality.FormattingEnabled = true;
+            this.cmbNationality.Location = new System.Drawing.Point(609, 219);
+            this.cmbNationality.Name = "cmbNationality";
+            this.cmbNationality.Size = new System.Drawing.Size(189, 28);
+            this.cmbNationality.TabIndex = 34;
+            // 
+            // cmbGender
+            // 
+            this.cmbGender.FormattingEnabled = true;
+            this.cmbGender.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.cmbGender.Location = new System.Drawing.Point(171, 165);
+            this.cmbGender.Name = "cmbGender";
+            this.cmbGender.Size = new System.Drawing.Size(189, 28);
+            this.cmbGender.TabIndex = 33;
+            this.cmbGender.SelectedIndexChanged += new System.EventHandler(this.cmbGender_SelectedIndexChanged);
             // 
             // dtpDateOfBirth
             // 
@@ -354,15 +374,15 @@
             this.lblPerson.TabIndex = 1;
             this.lblPerson.Text = "Person ID :";
             // 
-            // label1
+            // lblPersonID
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(177, 113);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 22);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "??";
+            this.lblPersonID.AutoSize = true;
+            this.lblPersonID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.lblPersonID.Location = new System.Drawing.Point(177, 113);
+            this.lblPersonID.Name = "lblPersonID";
+            this.lblPersonID.Size = new System.Drawing.Size(32, 22);
+            this.lblPersonID.TabIndex = 2;
+            this.lblPersonID.Text = "??";
             // 
             // lblAddUpdatePerson
             // 
@@ -375,33 +395,13 @@
             this.lblAddUpdatePerson.TabIndex = 3;
             this.lblAddUpdatePerson.Text = "Update Person";
             // 
-            // cmbGender
-            // 
-            this.cmbGender.FormattingEnabled = true;
-            this.cmbGender.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
-            this.cmbGender.Location = new System.Drawing.Point(171, 165);
-            this.cmbGender.Name = "cmbGender";
-            this.cmbGender.Size = new System.Drawing.Size(189, 28);
-            this.cmbGender.TabIndex = 33;
-            this.cmbGender.SelectedIndexChanged += new System.EventHandler(this.cmbGender_SelectedIndexChanged);
-            // 
-            // cmbNationality
-            // 
-            this.cmbNationality.FormattingEnabled = true;
-            this.cmbNationality.Location = new System.Drawing.Point(609, 219);
-            this.cmbNationality.Name = "cmbNationality";
-            this.cmbNationality.Size = new System.Drawing.Size(189, 28);
-            this.cmbNationality.TabIndex = 34;
-            // 
             // frmAddEditPerson
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1061, 686);
             this.Controls.Add(this.lblAddUpdatePerson);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblPersonID);
             this.Controls.Add(this.lblPerson);
             this.Controls.Add(this.grbPersonInfo);
             this.MaximizeBox = false;
@@ -418,7 +418,6 @@
 
         #endregion
         private System.Windows.Forms.Label lblPerson;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -449,5 +448,6 @@
         public System.Windows.Forms.Label lblAddUpdatePerson;
         public System.Windows.Forms.ComboBox cmbGender;
         public System.Windows.Forms.ComboBox cmbNationality;
+        public System.Windows.Forms.Label lblPersonID;
     }
 }

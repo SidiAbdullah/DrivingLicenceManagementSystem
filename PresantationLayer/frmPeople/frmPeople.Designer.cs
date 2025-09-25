@@ -78,7 +78,7 @@
             this.btnAddPerson.Size = new System.Drawing.Size(75, 49);
             this.btnAddPerson.TabIndex = 4;
             this.btnAddPerson.UseVisualStyleBackColor = true;
-            this.btnAddPerson.Click += new System.EventHandler(this.btnAddPerson_Click_1);
+            this.btnAddPerson.Click += new System.EventHandler(this.btnAddPerson_Click);
             // 
             // txtFilter
             // 
@@ -147,60 +147,62 @@
             this.tsmSendEmail,
             this.tsmPhoneCall});
             this.cmsPeople.Name = "contextMenuStrip1";
-            this.cmsPeople.Size = new System.Drawing.Size(225, 208);
+            this.cmsPeople.Size = new System.Drawing.Size(249, 241);
             // 
             // tsmShowDetails
             // 
             this.tsmShowDetails.Image = global::DrivingLicenseManagement.Properties.Resources.PersonDetails_32;
             this.tsmShowDetails.Name = "tsmShowDetails";
-            this.tsmShowDetails.Size = new System.Drawing.Size(224, 32);
+            this.tsmShowDetails.Size = new System.Drawing.Size(248, 32);
             this.tsmShowDetails.Text = "Show Details";
             this.tsmShowDetails.Click += new System.EventHandler(this.tsmShowDetails_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(221, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(245, 6);
             // 
             // tsmAddNewPerson
             // 
             this.tsmAddNewPerson.Image = global::DrivingLicenseManagement.Properties.Resources.AddPerson_321;
             this.tsmAddNewPerson.Name = "tsmAddNewPerson";
-            this.tsmAddNewPerson.Size = new System.Drawing.Size(224, 32);
+            this.tsmAddNewPerson.Size = new System.Drawing.Size(248, 32);
             this.tsmAddNewPerson.Text = "Add New Person";
+            this.tsmAddNewPerson.Click += new System.EventHandler(this.tsmAddNewPerson_Click);
             // 
             // tsmEdit
             // 
             this.tsmEdit.Image = global::DrivingLicenseManagement.Properties.Resources.edit_32;
             this.tsmEdit.Name = "tsmEdit";
-            this.tsmEdit.Size = new System.Drawing.Size(224, 32);
+            this.tsmEdit.Size = new System.Drawing.Size(248, 32);
             this.tsmEdit.Text = "Edit";
+            this.tsmEdit.Click += new System.EventHandler(this.tsmEdit_Click);
             // 
             // tsmDelete
             // 
             this.tsmDelete.Image = global::DrivingLicenseManagement.Properties.Resources.Delete_32;
             this.tsmDelete.Name = "tsmDelete";
-            this.tsmDelete.Size = new System.Drawing.Size(224, 32);
+            this.tsmDelete.Size = new System.Drawing.Size(248, 32);
             this.tsmDelete.Text = "Delete";
             this.tsmDelete.Click += new System.EventHandler(this.tsmDelete_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(221, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(245, 6);
             // 
             // tsmSendEmail
             // 
             this.tsmSendEmail.Image = global::DrivingLicenseManagement.Properties.Resources.send_email_32;
             this.tsmSendEmail.Name = "tsmSendEmail";
-            this.tsmSendEmail.Size = new System.Drawing.Size(224, 32);
+            this.tsmSendEmail.Size = new System.Drawing.Size(248, 32);
             this.tsmSendEmail.Text = "Send Email";
             // 
             // tsmPhoneCall
             // 
             this.tsmPhoneCall.Image = global::DrivingLicenseManagement.Properties.Resources.call_32;
             this.tsmPhoneCall.Name = "tsmPhoneCall";
-            this.tsmPhoneCall.Size = new System.Drawing.Size(224, 32);
+            this.tsmPhoneCall.Size = new System.Drawing.Size(248, 32);
             this.tsmPhoneCall.Text = "Phone Call";
             // 
             // label2

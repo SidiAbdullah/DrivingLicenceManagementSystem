@@ -4,7 +4,7 @@ using System.Data.SqlClient;
 
 namespace DrivingLicenseManagement.BL
 {
-    internal class buisnessLayer
+    internal class clsPeople
     {
         DAL.DataAccessLayer dal = new DAL.DataAccessLayer();
 
