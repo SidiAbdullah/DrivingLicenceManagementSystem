@@ -20,6 +20,56 @@ namespace DrivingLicenseManagement.BL
             return dal.ExecuteQuery("getPersonByNationalNo", parameters);
         }
 
+        public DataTable getPersonByFirstName(string firstName)
+        {
+            SqlParameter[] parameters = { new SqlParameter("@FirstName", firstName) };
+            return dal.ExecuteQuery("getPersonByFirstName", parameters);
+        }
+
+        public DataTable getPersonBySecondName(string secondName)
+        {
+            SqlParameter[] parameters = { new SqlParameter("@SecondName", secondName) };
+            return dal.ExecuteQuery("getPersonBySecondName", parameters);
+        }
+
+        public DataTable getPersonByThirdName(string thirdName)
+        {
+            SqlParameter[] parameters = { new SqlParameter("@ThirdName", thirdName) };
+            return dal.ExecuteQuery("getPersonByThirdName", parameters);
+        }
+
+        public DataTable getPersonByLastName(string lastName)
+        {
+            SqlParameter[] parameters = { new SqlParameter("@LastName", lastName) };
+            return dal.ExecuteQuery("getPersonByLastName", parameters);
+        }
+        // getPersonByNationalityCountry
+        public DataTable getPersonByGendor(string gendorText)
+        {
+            byte gendorValue;
+
+            if (gendorText.Equals("Male", StringComparison.OrdinalIgnoreCase))
+                gendorValue = 0;
+            else if (gendorText.Equals("Female", StringComparison.OrdinalIgnoreCase))
+                gendorValue = 1;
+            else if (!byte.TryParse(gendorText, out gendorValue))
+                throw new ArgumentException("Invalid Gendor value");
+
+            SqlParameter[] parameters = { new SqlParameter("@Gendor", gendorValue) };
+            return dal.ExecuteQuery("getPersonByGendor", parameters);
+        }
+        public DataTable getPersonByGmail(string gmail)
+        {
+            SqlParameter[] parameters = { new SqlParameter("@Gmail", gmail) };
+            return dal.ExecuteQuery("getPersonByGmail", parameters);
+        }
+
+        public DataTable getPersonByPhone(string phone)
+        {
+            SqlParameter[] parameters = { new SqlParameter("@Phone", phone) };
+            return dal.ExecuteQuery("getPersonByPhone", parameters);
+        }
+
         public DataTable getAllPeople()
         {
             return dal.ExecuteQuery("getAllPeople", null);
@@ -71,23 +121,8 @@ namespace DrivingLicenseManagement.BL
 
         public void deletePerson(string nationalNo)
         {
-            SqlParameter[] parameters = new SqlParameter[1];
-            parameters[0] = new SqlParameter("@NationalNo", nationalNo);
+            SqlParameter[] parameters = { new SqlParameter("@NationalNo", nationalNo) };
             dal.ExecuteNonQuery("deletePerson", parameters);
-        }
-
-        public bool isPersonExistByID(int PersonID)
-        {
-            SqlParameter[] parameters = { new SqlParameter("@PersonID", PersonID) };
-            object result = dal.ExecuteScalar("isPersonExist", parameters);
-            return result != null && Convert.ToInt32(result) > 0;
-        }
-
-        public bool isPersonExistByNationalNo(string NationalNo)
-        {
-            SqlParameter[] parameters = { new SqlParameter("@NationalNo", NationalNo) };
-            object result = dal.ExecuteScalar("isPersonExistByNationalNo", parameters);
-            return result != null && Convert.ToInt32(result) > 0;
         }
     }
 }

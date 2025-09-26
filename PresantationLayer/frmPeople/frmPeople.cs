@@ -1,10 +1,11 @@
-﻿using DrivingLicenseManagement.PresantationLayer;
+﻿using DrivingLicenseManagement.BL;
+using DrivingLicenseManagement.PresantationLayer;
 using System;
+using System.Data;
 using System.Data.SqlClient;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Windows.Forms;
-using System.Drawing.Imaging;
-using DrivingLicenseManagement.BL;
 
 namespace DrivingLicenseManagement.PL
 {
@@ -14,6 +15,7 @@ namespace DrivingLicenseManagement.PL
         public frmPeople()
         {
             InitializeComponent();
+            cmbFilterBy.DropDownStyle = ComboBoxStyle.DropDownList;
             dgvPeopleList.DataSource = people.getAllPeople();
             lblRecodrs.Text = (dgvPeopleList.RowCount - 1).ToString();
             lblRecodrs.Visible = true;
@@ -24,11 +26,71 @@ namespace DrivingLicenseManagement.PL
             this.Close();
         }
 
+        // Read Person
+        // 1. getBySearch
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             txtFilter.Visible = true;
         }
-        // Read Person
+        private void txtFilter_TextChanged_1(object sender, EventArgs e)
+        {
+            DataTable dt = null;
+            string filterValue = txtFilter.Text;
+
+            if (string.IsNullOrEmpty(filterValue))
+                return;
+
+            switch (cmbFilterBy.SelectedItem.ToString())
+            {
+                case "PersonID":
+                    if (int.TryParse(filterValue, out int personID))
+                        dt = people.getPersonByID(personID);
+                    break;
+
+                case "NationalNo":
+                    dt = people.getPersonByNationalNo(filterValue);
+                    break;
+
+                case "FirstName":
+                    dt = people.getPersonByFirstName(filterValue);
+                    break;
+
+                case "SecondName":
+                    dt = people.getPersonBySecondName(filterValue);
+                    break;
+
+                case "ThirdName":
+                    dt = people.getPersonByThirdName(filterValue);
+                    break;
+
+                case "LastName":
+                    dt = people.getPersonByLastName(filterValue);
+                    break;
+
+                //case "Nationality":
+                //    dt = people.getPersonByNationalityNo(filterValue);
+                //    break;
+
+                case "Gendor":
+                    dt = people.getPersonByGendor(filterValue);
+                    break;
+
+                case "Phone":
+                    dt = people.getPersonByPhone(filterValue);
+                    break;
+
+                case "Email":
+                    dt = people.getPersonByGmail(filterValue);
+                    break;
+            }
+
+            if (dt != null)
+            {
+                dgvPeopleList.DataSource = dt;
+            }
+        }
+
+        // 2. getAll
         private void tsmShowDetails_Click(object sender, EventArgs e)
         {
             // dgvPeopleList.CurrentRow.Cells[0].Value
@@ -177,5 +239,6 @@ namespace DrivingLicenseManagement.PL
                 }
             }
         }
+
     }
 }
