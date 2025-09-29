@@ -1,9 +1,11 @@
 ﻿using DrivingLicenseManagement.BL;
 using DrivingLicenseManagement.PresantationLayer;
+using DrivingLicenseManagement.PresantationLayer.frmPeople;
 using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing.Imaging;
+using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 
@@ -93,16 +95,46 @@ namespace DrivingLicenseManagement.PL
         // 2. getAll
         private void tsmShowDetails_Click(object sender, EventArgs e)
         {
-            // dgvPeopleList.CurrentRow.Cells[0].Value
+            frmPersonDetails personDetails = new frmPersonDetails();
+            int personID = Convert.ToInt32(dgvPeopleList.CurrentRow.Cells[0].Value);
+            personDetails.lblPersonID.Text = personID.ToString();
+
+
+            byte[] imgBytes = people.GetPersonPhoto(personID);
+
+            if (imgBytes != null && imgBytes.Length > 0)
+            {
+                using (MemoryStream ms = new MemoryStream(imgBytes))
+                {
+                    personDetails.ptbPersonImage.Image = Image.FromStream(ms);
+                }
+            }
+            else
+            {
+                personDetails.ptbPersonImage.Image = null; 
+            }
+
+
+            personDetails.lblNationalNo.Text = dgvPeopleList.CurrentRow.Cells[1].Value.ToString();
+            personDetails.lblName.Text = dgvPeopleList.CurrentRow.Cells[2].Value.ToString() + " " + 
+                                         dgvPeopleList.CurrentRow.Cells[3].Value.ToString() + " " +
+                                         dgvPeopleList.CurrentRow.Cells[4].Value.ToString() + " " +
+                                         dgvPeopleList.CurrentRow.Cells[5].Value.ToString();
+            personDetails.lblGendor.Text = dgvPeopleList.CurrentRow.Cells[6].Value.ToString();
+            personDetails.lblDateOfBirth.Text = dgvPeopleList.CurrentRow.Cells[7].Value.ToString();
+            personDetails.lblCountry.Text = dgvPeopleList.CurrentRow.Cells[8].Value.ToString();
+            personDetails.lblPhone.Text = dgvPeopleList.CurrentRow.Cells[9].Value.ToString();
+            personDetails.lblEmail.Text = dgvPeopleList.CurrentRow.Cells[10].Value.ToString();
+            personDetails.ShowDialog();
         }
         // Delete Person
         private void tsmDelete_Click(object sender, EventArgs e)
         {
             try
             {
-                if (MessageBox.Show("Are you sure you want to delete?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.OK)
+                if (MessageBox.Show("Are you sure you want to delete?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
-                    people.deletePerson(dgvPeopleList.CurrentRow.Cells[0].Value.ToString());
+                    people.deletePerson((int)dgvPeopleList.CurrentRow.Cells[0].Value);
                     dgvPeopleList.DataSource = people.getAllPeople();
                     lblRecodrs.Text = dgvPeopleList.RowCount.ToString();
                 }

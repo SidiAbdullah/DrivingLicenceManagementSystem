@@ -74,6 +74,17 @@ namespace DrivingLicenseManagement.BL
         {
             return dal.ExecuteQuery("getAllPeople", null);
         }
+        public byte[] GetPersonPhoto(int personID)
+        {
+            SqlParameter[] parameters = new SqlParameter[1];
+            parameters[0] = new SqlParameter("@personID", personID);
+            object result = dal.ExecuteScalar("GetPersonPhoto", parameters);
+
+            if (result != null && result != DBNull.Value)
+                return (byte[])result;
+
+            return null;
+        }
 
         public void addNewPerson(
             string nationalNo, string firstName, string secondName, string thirdName, string lastName,
@@ -119,9 +130,9 @@ namespace DrivingLicenseManagement.BL
             dal.ExecuteNonQuery("updatePerson", parameters);
         }
 
-        public void deletePerson(string nationalNo)
+        public void deletePerson(int personID)
         {
-            SqlParameter[] parameters = { new SqlParameter("@NationalNo", nationalNo) };
+            SqlParameter[] parameters = { new SqlParameter("@personID", personID) };
             dal.ExecuteNonQuery("deletePerson", parameters);
         }
     }
