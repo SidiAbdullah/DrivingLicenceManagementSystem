@@ -43,7 +43,11 @@ namespace DrivingLicenseManagement.BL
             SqlParameter[] parameters = { new SqlParameter("@LastName", lastName) };
             return dal.ExecuteQuery("getPersonByLastName", parameters);
         }
-        // getPersonByNationalityCountry
+        public DataTable getPersonByCountryName(string CountryName)
+        {
+            SqlParameter[] parameters = { new SqlParameter("@CountryName", CountryName) };
+            return dal.ExecuteQuery("getPersonByCountryName", parameters);
+        }
         public DataTable getPersonByGendor(string gendorText)
         {
             byte gendorValue;
@@ -58,10 +62,10 @@ namespace DrivingLicenseManagement.BL
             SqlParameter[] parameters = { new SqlParameter("@Gendor", gendorValue) };
             return dal.ExecuteQuery("getPersonByGendor", parameters);
         }
-        public DataTable getPersonByGmail(string gmail)
+        public DataTable getPersonByEmail(string gmail)
         {
-            SqlParameter[] parameters = { new SqlParameter("@Gmail", gmail) };
-            return dal.ExecuteQuery("getPersonByGmail", parameters);
+            SqlParameter[] parameters = { new SqlParameter("@Email", gmail) };
+            return dal.ExecuteQuery("getPersonByEmail", parameters);
         }
 
         public DataTable getPersonByPhone(string phone)

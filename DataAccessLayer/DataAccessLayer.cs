@@ -57,7 +57,6 @@ namespace DrivingLicenseManagement.DAL
             }
             return recordsCount;
         }
-        // ExecuteScalar() for Searching in people
         public object ExecuteScalar(string storedProcedure, params SqlParameter[] parameters)
         {
             object result = null;

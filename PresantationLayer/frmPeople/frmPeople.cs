@@ -40,7 +40,10 @@ namespace DrivingLicenseManagement.PL
             string filterValue = txtFilter.Text;
 
             if (string.IsNullOrEmpty(filterValue))
+            {
+                dgvPeopleList.DataSource = people.getAllPeople();
                 return;
+            }
 
             switch (cmbFilterBy.SelectedItem.ToString())
             {
@@ -82,7 +85,7 @@ namespace DrivingLicenseManagement.PL
                     break;
 
                 case "Email":
-                    dt = people.getPersonByGmail(filterValue);
+                    dt = people.getPersonByEmail(filterValue);
                     break;
             }
 
@@ -136,7 +139,7 @@ namespace DrivingLicenseManagement.PL
                 {
                     people.deletePerson((int)dgvPeopleList.CurrentRow.Cells[0].Value);
                     dgvPeopleList.DataSource = people.getAllPeople();
-                    lblRecodrs.Text = dgvPeopleList.RowCount.ToString();
+                    lblRecodrs.Text = (dgvPeopleList.RowCount - 1).ToString();
                 }
             }
             catch (SqlException ex)

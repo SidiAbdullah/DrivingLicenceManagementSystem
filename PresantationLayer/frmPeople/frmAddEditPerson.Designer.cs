@@ -123,6 +123,7 @@
             // dtpDateOfBirth
             // 
             this.dtpDateOfBirth.CustomFormat = "";
+            this.dtpDateOfBirth.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDateOfBirth.Location = new System.Drawing.Point(609, 115);
             this.dtpDateOfBirth.Name = "dtpDateOfBirth";
             this.dtpDateOfBirth.Size = new System.Drawing.Size(189, 26);
